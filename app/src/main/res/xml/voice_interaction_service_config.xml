@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<voice-interaction-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sessionService="org.autojs.autojs.core.voiceinteraction.VoiceInteractionSessionServiceUsher"
+    android:recognitionService="org.autojs.autojs.core.voiceinteraction.VoiceInteractionServiceUsher"
+    android:supportsAssist="true"
+    android:supportsLaunchVoiceAssistFromKeyguard="true"
+    android:supportsLocalInteraction="true" />
