@@ -212,7 +212,7 @@
     <string name="text_full_version_info" translatable="false">%1$s (%2$d)</string>
     <string name="text_half_ellipsis" translatable="false" formatted="true">...</string>
     <string name="text_jks" translatable="false">JKS</string>
-    <string name="text_powered_by_autojs" translatable="false">Powered by AutoJs6</string>
+    <string name="text_powered_by_autojs" translatable="false">异火</string>
     <string name="text_root" translatable="false">Root</string>
     <string name="text_sample_button" translatable="false">Hello</string>
     <string name="text_sample_file_date" translatable="false">2023-04-02 22:54</string>

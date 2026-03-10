@@ -4,7 +4,7 @@
   "launchConfig": {
     "displaySplash": true,
     "hideLogs": true,
-    "splashText": "Powered by AutoJs6",
+    "splashText": "异火",
     "stableMode": false
   },
   "main": "main.js",
