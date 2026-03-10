@@ -230,7 +230,8 @@ public class ProjectConfig {
         ProjectConfig projectConfig = new ProjectConfig();
         LaunchConfig launchConfig = new LaunchConfig();
         BuildInfo buildInfo = new BuildInfo();
-
+Pattern launchConfigSlugPattern = Pattern.compile(stringPattern("slug"));
+Pattern launchConfigSplashTextPattern = Pattern.compile(stringPattern("splashText"));
         Pattern namePattern = Pattern.compile(stringPattern("name"));
         Pattern versionNamePattern = Pattern.compile(stringPattern("versionName"));
         Pattern versionCodePattern = Pattern.compile(numberPattern("versionCode"));
@@ -274,7 +275,9 @@ public class ProjectConfig {
 
         setFieldForBooleanIfMatches(launchConfigDisplaySplashPattern, s, launchConfig::setSplashVisible);
         setFieldForBooleanIfMatches(launchConfigSplashVisiblePattern, s, launchConfig::setSplashVisible); /* 优先. */
-
+// 在设置其他字段后添加
+setFieldIfMatches(launchConfigSlugPattern, s, launchConfig::setSlug);
+setFieldIfMatches(launchConfigSplashTextPattern, s, launchConfig::setSlug); /* 优先. */
         if (projectConfig.getName() == null || projectConfig.getName().isBlank()) {
             if (jsonFilePath.endsWith(CONFIG_FILE_NAME)) {
                 File parentFile = new File(jsonFilePath).getParentFile();

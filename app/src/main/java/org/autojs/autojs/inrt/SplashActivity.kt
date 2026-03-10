@@ -39,6 +39,10 @@ class SplashActivity : AppCompatActivity() {
             else -> {
                 CoroutineScope(Dispatchers.Main).launch {
                     binding.slug.typeface = Typeface.createFromAsset(assets, "roboto_medium.ttf")
+   // 添加这一行，检查 projectConfig 是否为 null
+    if (projectConfig != null) {
+        binding.slug.text = projectConfig.launchConfig.slug
+    }
                     binding.slug.isVisible = true
                     binding.icon.isVisible = true
                 }
